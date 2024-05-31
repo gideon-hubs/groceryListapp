@@ -17,3 +17,8 @@ jobs:
        - run: npm install -g 
        - run: npm install --frozen-lockfile
        - run: npm build
+       - uses: aws-actions/configure-aws-credentials@v1
+         with:
+           aws-access-key-id: ${{ secret.AWS_ACCESS_KEY_ID }}
+           aws-secret-access-key: ${{ secret.AWS_ACCESS_KEY_ID }}
+           aws-region: us-east-1
