@@ -19,12 +19,13 @@ jobs:
        - run: npm build
        - uses: aws-actions/configure-aws-credentials@v1
          with:
-          aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
+          # aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
           aws-access-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }} 
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
           role-duration-seconds: 3600
+       - run: aws s3 sync ./out s3://green-mobility-website
           
 
 
