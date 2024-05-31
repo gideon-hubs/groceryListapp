@@ -25,5 +25,5 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }} 
        - run: ls -alh
        - run: aws s3 cp --recursive build s3://green-mobility-website
-       # - run: aws s3 sync ./out s3://green-mobility-website
+
        
