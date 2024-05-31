@@ -24,6 +24,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }} 
        - run: ls -alh
-       - run: aws s3 cp --recursive build s3://green-mobility-website/grocery/
+       - run: aws s3 cp --recursive build s3://green-mobility-website
        # - run: aws s3 sync ./out s3://green-mobility-website
        
