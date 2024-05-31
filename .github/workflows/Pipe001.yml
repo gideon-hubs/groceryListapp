@@ -16,7 +16,7 @@ jobs:
            node-version: 12
        - run: npm install -g 
        - run: npm install --frozen-lockfile
-       - run: npm build
+       - run: npm run-script dist
        - uses: aws-actions/configure-aws-credentials@v1
          with:
           aws-s3-bucket: ${{ secrets.AWS_S3_BUCKET }}
