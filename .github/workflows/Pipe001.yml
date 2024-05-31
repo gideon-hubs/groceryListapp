@@ -24,11 +24,10 @@
 #            aws-region: us-east-1
 
 
-name: Deployment of Green Mobility Website
-
+name: Deployment of Grocery App
 on:
   push:
-    branches: [ production ]
+    branches: [ main ]
   
 jobs:
   deploy:
